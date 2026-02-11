@@ -40,3 +40,25 @@ Add this line (example):
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+## Footer Version & Deploy Date
+
+The website footer displays:
+- Portfolio version
+- Deploy date (generated dynamically using JavaScript)
+- Author name
+
+### Date Logic
+The deploy date is generated at runtime using JavaScript:
+
+```html
+<span id="deployDate"></span>
+
+new Date().toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric'
+});
+
+
+
